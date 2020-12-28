@@ -27,7 +27,7 @@
             </div>
 
             <div class="u-ml-4">
-                <?php include get_partials_directory() . '/navigation/language-switcher.php' ?>
+                <?php // include get_partials_directory() . '/navigation/language-switcher.php' ?>
             </div>
         </div>
     </div>
