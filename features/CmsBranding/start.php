@@ -21,4 +21,3 @@ if (!isset($branding_config['header-text'])) {
         return $branding_config['header-text'];
     });
 }
-

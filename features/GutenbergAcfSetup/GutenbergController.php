@@ -19,7 +19,7 @@ class GutenbergController
 
     public function gutenberg_support()
     {
-        bl_add_theme_support($this->gutenbergConfig['theme-supports']);
+        mer_add_theme_support($this->gutenbergConfig['theme-supports']);
 
         // Adds support for editor font sizes.
         add_theme_support(

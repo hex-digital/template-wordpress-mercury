@@ -11,7 +11,7 @@ $max_columns: 1 2 3;
     }
   }
 
-  &--3-column {w
+  &--3-column {
     @screen lg {
       grid-template-columns: 1fr 1fr 1fr;
     }
