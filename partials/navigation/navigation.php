@@ -1,5 +1,5 @@
 <nav class="c-navbar">
-    <div class="c-navbar__wrapper o-wrapper">
+    <div class="c-navbar__wrapper u-wrapper">
 
         <div class="c-navbar__container">
             <div class="c-navbar__brand">
@@ -12,7 +12,7 @@
                 <?php
                 wp_nav_menu([
                     'theme_location' => 'header_menu',
-                    'container_class' => 'o-cluster c-navbar__links',
+                    'container_class' => 'u-cluster c-navbar__links',
                     'menu_class' => 'c-navbar__link-list',
                     'list_item_class' => 'c-navbar__link-item',
                     'link_class' => 'c-navbar__link',
@@ -35,7 +35,7 @@
 
 <div class="js-search-global-modal">
     <div class="js-search-global-modal__ribbon">
-        <div class="o-wrapper u-flex u-flex-row u-items-center">
+        <div class="u-wrapper u-flex u-flex-row u-items-center">
             <div class="js-search-global-modal__search-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <? // phpcs:ignore Generic.Files.LineLength.TooLong ?>
@@ -56,7 +56,7 @@
     </div>
 
     <div class="js-search-global-modal__cover">
-        <div class="o-wrapper">
+        <div class="u-wrapper">
             <div class="u-border-t u-pt-5 u-mt-6 u-text-3xl">
                 Press enter for results
             </div>

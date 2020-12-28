@@ -4,7 +4,6 @@ const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
-const Captaincss = require('@captaincss/captaincss');
 
 module.exports = {
   // Where webpack looks to start building the bundle. See: https://webpack.js.org/configuration/entry-context/
@@ -28,11 +27,6 @@ module.exports = {
 
     // Removes/cleans build folders and unused assets when rebuilding. See: https://www.npmjs.com/package/clean-webpack-plugin
     new CleanWebpackPlugin({ cleanAfterEveryBuildPatterns: ['!fonts/*'] }),
-
-    new Captaincss({
-      config: paths.root + '/tailwind.config.js',
-      destination: 'src/scss/_tailwind.config',
-    }),
 
     new AssetsPlugin({
       path: paths.build,

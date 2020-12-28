@@ -31,7 +31,7 @@ foreach ($sections as $section) {
 
 ?>
 
-<div class="o-wrapper c-page-template">
+<div class="u-wrapper c-page-template">
     <h2 class="u-text-body-lg u-font-semibold u-py-4 u-flex u-justify-between">
         <span>Results</span>
         <span><?= $total_results ?></span>

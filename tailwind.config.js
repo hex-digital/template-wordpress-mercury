@@ -1,3 +1,7 @@
+/* global require */
+const Captaincss = require('@captaincss/captaincss');
+const GutenbergPalette = require('./tools/tailwind/gutenberg-palette');
+
 /* global module */
 const pxToRem = (px) => {
   const baseFont = 16 * 1.125; // Font size defined as 1.125em in _elements.page.scss
@@ -5,19 +9,16 @@ const pxToRem = (px) => {
 };
 
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-    defaultLineHeights: true,
-    standardFontWeights: true,
-  },
   prefix: 'u-',
   purge: {
     content: ['./**/*.php', './src/**/*.js', './src/**/*.svg', './src/scss/purge-whitelist.scss'],
     options: {
-      whitelistPatterns: getCSSWhitelistPatterns(),
+      safelist: {
+        standard: getCSSWhitelistPatterns(),
+      },
     },
   },
+  plugins: [Captaincss, GutenbergPalette],
   theme: {
     extend: {
       spacing: {
@@ -36,7 +37,7 @@ module.exports = {
       xl: '1500px', // Desktop Large
     },
     boxShadow: {
-      default: '0px 1px 2px rgba(0,0,0, 0.2)',
+      DEFAULT: '0px 1px 2px rgba(0,0,0, 0.2)',
     },
     transitionTimingFunction: {
       'in-sine': 'cubic-bezier(0.47, 0, 0.75, 0.72)',
@@ -134,6 +135,24 @@ module.exports = {
       wide: '.08em',
       wider: '.1em',
       widest: '.25em',
+    },
+    wrapper: (theme) => ({
+      padding: {
+        /* [1] Largest breakpoint padding should match the two values added to max-width of the wrapper, to get the correct width */
+        default: theme('spacing.4xl'),
+        sm: theme('spacing.5xl'),
+        lg: theme('spacing.11') /* [1] */,
+      },
+      maxWidth: {
+        default: `calc(1440px + theme('spacing.11') + theme('spacing.11'))` /* [1] */,
+      },
+    }),
+    frame: {
+      ratios: {
+        square: '1:1',
+        '16:9': '16:9',
+        golden: '1.618:1',
+      },
     },
   },
 };

@@ -82,7 +82,7 @@ $max_columns: 1 2 3;
     }
 
     &__buttons {
-      & .o-cluster > * {
+      & .u-cluster > * {
         // The buttons are justify-content: flex-start by default in a cluster, so this centres them.
         justify-content: center;
       }

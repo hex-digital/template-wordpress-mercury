@@ -1,11 +1,5 @@
-@import './tailwind.config';
-@import '@captaincss/captaincss/scss/settings/_settings.core';
-@import '@captaincss/captaincss/scss/settings/_settings.theme';
-@import 'settings/_settings.theme';
 @import 'settings/_settings.gutenberg';
 
-@import '@captaincss/captaincss/scss/tools/_tools.captain';
-@import '@captaincss/captaincss/scss/tools/_tools.helpers';
 @import 'tools/_tools.mixins';
 
 @import 'generics/generics.fonts';
@@ -16,17 +10,7 @@
 }
 
 @import 'tailwindcss/components';
-@layer components {
-  // Each object can be used on its own in any project. The only dependency is the _tools.captain file.
-  @import '@captaincss/captaincss/scss/objects/_objects.cluster';
-  @import '@captaincss/captaincss/scss/objects/_objects.content';
-  @import '@captaincss/captaincss/scss/objects/_objects.frame';
-  @import '@captaincss/captaincss/scss/objects/_objects.screen-reader';
-  @import '@captaincss/captaincss/scss/objects/_objects.stack';
-  @import '@captaincss/captaincss/scss/objects/_objects.wrapper';
-}
-
-@import 'objects/objects.wrapper';
+@layer components
 
 @import 'components/component.button';
 @import 'components/component.navigation';
@@ -46,7 +30,6 @@
 
 @import 'tailwindcss/utilities';
 @layer utilities {
-  @import '@captaincss/captaincss/scss/utilities/_utilities.debug';
   @import 'utilities/utilities.text';
   @import 'utilities/utilities.gutenberg-output';
 }
