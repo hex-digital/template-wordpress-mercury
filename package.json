@@ -1,0 +1,88 @@
+{
+  "name": "template-wordpress-mercury",
+  "version": "0.0.1",
+  "description": "Mercury - WordPress Development Starter Theme - Built with 🖤",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --config tools/webpack.dev.js",
+    "dev:start": "cross-env NODE_ENV=development webpack --config tools/webpack.dev.js --watch",
+    "dev:progress": "start --progress",
+    "build": "cross-env NODE_ENV=production webpack --config tools/webpack.prod.js",
+    "build:progress": "build --progress",
+    "lint": "yarn lint:js",
+    "lint:js": "eslint .",
+    "lint:js:fix": "yarn lint:js --fix"
+  },
+  "main": "src/index.js",
+  "repository": "https://github.com/hex-digital/template-wordpress-mercury",
+  "bugs": "https://github.com/hex-digital/template-wordpress-mercury/issues",
+  "author": "Hex Digital",
+  "homepage": "https://hexdigital.com",
+  "contributors": [
+    "Sirwan Qutbi <sirwan@hexdigital.com>",
+    "Jamie Warburton <jamie@hexdigital.com>"
+  ],
+  "sideEffects": [
+    "*.scss"
+  ],
+  "browserslist": [
+    "> 1%",
+    "last 4 versions",
+    "Firefox ESR",
+    "not edge <= 18",
+    "not ie 11",
+    "not op_mini all",
+    "not dead"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.php": ["vendor/bin/phpcs"]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@captaincss/captaincss": "^1.2.0",
+    "assets-webpack-plugin": "^6.0.3",
+    "autoprefixer": "^10.0.1",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.13",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.3.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^5.0.1",
+    "css-minimizer-webpack-plugin": "^1.1.5",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "fibers": "^5.0.0",
+    "husky": "^4.3.0",
+    "image-minimizer-webpack-plugin": "^1.0.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.1",
+    "imagemin-svgo": "^8.0.0",
+    "lint-staged": "^10.5.2",
+    "mini-css-extract-plugin": "^1.2.1",
+    "postcss": "^8.1.6",
+    "postcss-loader": "^4.0.4",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.2.1",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.0.5",
+    "style-loader": "^2.0.0",
+    "tailwindcss": "^1.9.6",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dashboard": "^3.2.1",
+    "webpack-merge": "^5.3.0"
+  },
+  "dependencies": {}
+}

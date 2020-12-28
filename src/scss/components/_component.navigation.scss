@@ -1,0 +1,44 @@
+.c-navbar {
+  @apply u-font-title u-bg-transparent;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+
+  &--dark {
+    @apply u-text-grey-200;
+    display: block;
+    .c-navbar__logo--light{
+      display: none;
+    }
+  }
+
+  &--light {
+    @apply u-text-grey-800;
+    display: block;
+    .c-navbar__logo--dark{
+      display: none
+    }
+  }
+}
+
+.c-navbar__wrapper {
+  @apply u-py-6;
+}
+
+.c-navbar__container {
+  @apply u-flex u-flex-row u-items-center;
+}
+
+.c-navbar__links {
+  @apply u-ml-auto;
+}
+
+.c-navbar__link-list {
+  @apply u-ml-auto u-flex u-items-center;
+}
+
+.c-navbar__link {
+  @apply u-uppercase u-text-xs u-tracking-wider u-font-bold;
+}

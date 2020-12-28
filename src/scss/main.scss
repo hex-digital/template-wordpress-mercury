@@ -1,0 +1,52 @@
+@import './tailwind.config';
+@import '@captaincss/captaincss/scss/settings/_settings.core';
+@import '@captaincss/captaincss/scss/settings/_settings.theme';
+@import 'settings/_settings.theme';
+@import 'settings/_settings.gutenberg';
+
+@import '@captaincss/captaincss/scss/tools/_tools.captain';
+@import '@captaincss/captaincss/scss/tools/_tools.helpers';
+@import 'tools/_tools.mixins';
+
+@import 'generics/generics.fonts';
+
+@import 'tailwindcss/base';
+@layer base {
+  @import 'elements/elements.page';
+}
+
+@import 'tailwindcss/components';
+@layer components {
+  // Each object can be used on its own in any project. The only dependency is the _tools.captain file.
+  @import '@captaincss/captaincss/scss/objects/_objects.cluster';
+  @import '@captaincss/captaincss/scss/objects/_objects.content';
+  @import '@captaincss/captaincss/scss/objects/_objects.frame';
+  @import '@captaincss/captaincss/scss/objects/_objects.screen-reader';
+  @import '@captaincss/captaincss/scss/objects/_objects.stack';
+  @import '@captaincss/captaincss/scss/objects/_objects.wrapper';
+}
+
+@import 'objects/objects.wrapper';
+
+@import 'components/component.button';
+@import 'components/component.navigation';
+@import 'components/component.footer';
+@import 'components/component.search-modal';
+@import 'components/component.search-result';
+@import 'components/component.page-template';
+@import 'components/component.swoosh';
+@import 'components/blocks/component.acf-banner';
+@import 'components/blocks/component.acf-compact-grid';
+@import 'components/blocks/component.acf-focus-block';
+@import 'components/blocks/component.gute-spacer';
+@import 'components/component.language-switcher';
+@import 'components/component.paginate';
+@import 'components/component.thumbnail';
+@import 'components/component.tag';
+
+@import 'tailwindcss/utilities';
+@layer utilities {
+  @import '@captaincss/captaincss/scss/utilities/_utilities.debug';
+  @import 'utilities/utilities.text';
+  @import 'utilities/utilities.gutenberg-output';
+}

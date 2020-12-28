@@ -1,0 +1,33 @@
+.u-gutenberg {
+  > p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 49.5rem;
+  }
+
+  p + p {
+    margin-top: theme('spacing.2');
+  }
+}
+
+.u-gutenberg {
+   p + p{
+    margin-top: theme('spacing.2');
+  }
+}
+
+@each $color-name, $color-hex in $tw-textColor {
+  .has-#{$color-name}-color {
+    color: $color-hex;
+
+    &.is-style-stroke {
+      -webkit-text-stroke-color: $color-hex;
+    }
+  }
+}
+
+@each $color-name, $color-hex in $tw-backgroundColor {
+  .has-#{$color-name}-background-color {
+    background-color: $color-hex;
+  }
+}

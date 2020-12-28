@@ -1,0 +1,52 @@
+{
+    "key": "group_5fb22a45b8935",
+    "title": "Text Size",
+    "fields": [
+        {
+            "key": "field_5fb22a45c402f",
+            "label": "Text Size",
+            "name": "text_size",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "heading-xl": "Heading XL",
+                "heading-lg": "Heading LG",
+                "heading-md": "Heading MD",
+                "heading-sm": "Heading SM"
+            },
+            "default_value": "heading-lg",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "translations": "copy_once",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": ""
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "modified": 1605518540
+}

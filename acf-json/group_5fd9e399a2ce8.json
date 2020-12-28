@@ -1,0 +1,244 @@
+{
+    "key": "group_5fd9e399a2ce8",
+    "title": "Compact Grid",
+    "fields": [
+        {
+            "key": "field_5fd9e399b043a",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5fd9e399b0452",
+            "label": "Content",
+            "name": "content",
+            "type": "repeater",
+            "instructions": "Add content to the columns. Not all columns need content. Columns without content will still occupy space.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5fd9e5af82ffc",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Content",
+            "sub_fields": [
+                {
+                    "key": "field_5fd9e59682ffb",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "translations": "copy_once"
+                },
+                {
+                    "key": "field_5fd9e5af82ffc",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "translations": "translate"
+                },
+                {
+                    "key": "field_5fd9e5ba82ffd",
+                    "label": "Subtitle",
+                    "name": "subtitle",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "translations": "translate"
+                }
+            ]
+        },
+        {
+            "key": "field_5fd9e399b045b",
+            "label": "Settings",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5fd9e399b0464",
+            "label": "Max Columns",
+            "name": "max_columns",
+            "type": "select",
+            "instructions": "Maximum number of columns. Not all columns need content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "1",
+                "2": "2",
+                "3": "3",
+                "4": "4",
+                "5": "5",
+                "6": "6",
+                "7": "7",
+                "8": "8"
+            },
+            "default_value": 8,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "translations": "sync",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5fd9e6fd1555a",
+            "label": "Images",
+            "name": "images",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": []
+        },
+        {
+            "key": "field_5fd9e5cd82ffe",
+            "label": "Image Corner Radius",
+            "name": "image_corner_radius",
+            "type": "select",
+            "instructions": "Choose whether the corners of the image should be square, rounded or a full circle.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "square": "Square",
+                "rounded": "Rounded",
+                "circle": "Circle"
+            },
+            "default_value": "square",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "translations": "copy_once",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5fd9e63382fff",
+            "label": "Image Aspect Ratio",
+            "name": "image_aspect_ratio",
+            "type": "select",
+            "instructions": "Choose whether an aspect ratio should be enforced for all images. Choosing one will make all images the same size.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "square": "Square",
+                "rectangle": "Rectangle"
+            },
+            "default_value": "square",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "translations": "copy_once",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/compact-grid"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1608116025
+}

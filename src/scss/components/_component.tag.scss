@@ -1,0 +1,27 @@
+.c-tag {
+    // @TODO: add transition function from design token
+    @apply u-font-body;
+    color: theme('colors.grey.200');
+    font-size: theme('fontSize.xs');
+    position: relative;
+    border-radius: 9999px;
+    padding-top: theme('spacing.1');
+    padding-bottom: theme('spacing.1');
+    padding-left: theme('spacing.3');
+    padding-right: theme('spacing.3');
+    border: 1px solid theme('colors.grey.200');
+    font-weight: theme('fontWeight.medium');
+    &:hover{
+        color: theme('colors.grey.400');
+        border: 1px solid theme('colors.grey.400');
+    }
+
+    &--light{
+        color: theme('colors.grey.400');
+        border: 1px solid theme('colors.grey.400');
+        &:hover{
+            color: theme('colors.grey.300');
+            border: 1px solid theme('colors.grey.300');
+        }
+    }
+}

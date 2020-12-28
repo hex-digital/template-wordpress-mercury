@@ -1,0 +1,91 @@
+$max_columns: 1 2 3;
+
+.acf-focus-block {
+  display: grid;
+  grid-gap: theme('spacing.6');
+  grid-template-columns: 1fr;
+
+  &--2-column {
+    @screen md {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &--3-column {w
+    @screen lg {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &.alignwide {
+    max-width: none;
+
+    @screen xl {
+      @include wide-width();
+    }
+  }
+
+  &.alignfull {
+    @include bleed-width();
+  }
+}
+
+.acf-focus-panel {
+  background-blend-mode: multiply;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 440px;
+  justify-content: space-between;
+  padding: theme('spacing.5xl') theme('spacing.4xl');
+
+  @screen md {
+    min-height: 540px;
+    padding: theme('spacing.9');
+  }
+
+  &__content {
+    /**
+     * The block has a button that should be right aligned when all of these conditions are true:
+     * 1. The block is set to 1 column max
+     * 2. The block is not set to the 'Central' style
+     * 3. The screen is desktop small or larger (bigger than a tablet)
+     * If any are false, the block stops being right aligned, and fits back into regular flow.
+     */
+    // [1]                     [2]
+    .acf-focus-block--1-column:not(.is-style-central) & {
+      // [3]
+      @screen lg {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__buttons {
+    align-self: flex-end;
+    margin-top: theme('spacing.6');
+  }
+
+  .is-style-central & {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &__content {
+      display: unset;
+      flex-direction: unset;
+      justify-content: unset;
+    }
+
+    &__buttons {
+      & .o-cluster > * {
+        // The buttons are justify-content: flex-start by default in a cluster, so this centres them.
+        justify-content: center;
+      }
+    }
+  }
+}

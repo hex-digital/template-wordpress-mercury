@@ -1,0 +1,48 @@
+$spacing-sizes: (
+  'tiny': (
+    'default': theme('spacing.1'),
+    'md': theme('spacing.2'),
+    'lg': theme('spacing.3'),
+    'xl': theme('spacing.4'),
+  ),
+  'small': (
+    'default': theme('spacing.2'),
+    'md': theme('spacing.4'),
+    'lg': theme('spacing.6'),
+    'xl': theme('spacing.8'),
+  ),
+  'medium': (
+    'default': theme('spacing.3'),
+    'md': theme('spacing.6'),
+    'lg': theme('spacing.8'),
+    'xl': theme('spacing.12'),
+  ),
+  'large': (
+    'default': theme('spacing.4'),
+    'md': theme('spacing.8'),
+    'lg': theme('spacing.12'),
+    'xl': theme('spacing.16'),
+  ),
+  'xlarge': (
+    'default': theme('spacing.5'),
+    'md': theme('spacing.10'),
+    'lg': theme('spacing.20'),
+    'xl': theme('spacing.24'),
+  ),
+);
+
+.wp-block-spacer {
+
+  @each $size-name, $size-map in $spacing-sizes {
+    &.is-style-#{$size-name} {
+
+      @each $breakpoint-name, $spacing-unit in $size-map {
+        @include screen($breakpoint-name) {
+          height: $spacing-unit !important; // Important as Gutenberg applies an inline style for height that we must override.
+        }
+      }
+
+    }
+  }
+
+}

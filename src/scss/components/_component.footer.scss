@@ -1,0 +1,36 @@
+.c-footer {
+  @apply u-bg-blue-300 u-text-white u-py-5;
+}
+
+.c-footer__logo {
+  @apply u-mb-5;
+}
+
+.c-footer__registered-charity {
+  @apply list-none;
+  font-size: theme('fontSize.xs');
+}
+
+.c-footer__menu{
+
+  @apply list-none;
+
+  &__header{
+    font-size: theme('fontSize.base');
+    @apply u-mb-4 u-font-semibold;
+  }
+
+  &__link{
+    @apply u-font-medium;
+    font-size: theme('fontSize.sm');
+  }
+}
+
+.c-footer__copyright {
+  font-size: theme('fontSize.sm');
+  @apply u-ml-auto;
+}
+
+.c-footer__social-menu {
+
+}

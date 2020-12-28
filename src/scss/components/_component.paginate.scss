@@ -1,0 +1,19 @@
+.c-paginate{
+    margin: theme('spacing.16') 0px;
+    display: block;
+    font-weight: theme('fontWeight.semibold');
+}
+.page-numbers{
+    border-radius: theme('borderRadius.full');
+    background: theme('backgroundColor.grey.600');
+    box-shadow: theme('boxShadow.default');
+    color: theme('colors.grey.300');
+    display: inline-block;
+    margin-right: theme('spacing.3');
+    padding: theme('spacing.4') theme('spacing.6');
+}
+
+.c-paginate > .current{
+    background: theme('backgroundColor.grey.200');
+    color: theme('colors.grey.800');
+}

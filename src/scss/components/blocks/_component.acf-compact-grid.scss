@@ -1,0 +1,29 @@
+$max_columns: 1 2 3 4 5 6 7 8;
+
+.acf-compact-grid {
+  display: grid;
+  grid-gap: theme('spacing.4');
+
+  @each $column in $max_columns {
+    &--#{$column}-column {
+      grid-template-columns: repeat(#{$column}, 1fr);
+    }
+  }
+
+  &__image {
+    margin-bottom: theme('spacing.4');
+    padding-right: theme('spacing.4');
+  }
+
+  &.alignwide {
+    max-width: none;
+
+    @screen xl {
+      @include wide-width();
+    }
+  }
+
+  &.alignfull {
+    @include bleed-width();
+  }
+}

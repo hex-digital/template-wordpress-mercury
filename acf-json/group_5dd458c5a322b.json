@@ -1,0 +1,50 @@
+{
+    "key": "group_5dd458c5a322b",
+    "title": "Site Options",
+    "fields": [
+        {
+            "key": "field_5fa95f6f13b9e",
+            "label": "Header Type",
+            "name": "header_type",
+            "type": "select",
+            "instructions": "Does this page have a dark background",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Light Header": "Light Header",
+                "Dark Header": "Dark Header"
+            },
+            "default_value": "Dark Header",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "translations": "sync",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "top_level"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1605803049
+}

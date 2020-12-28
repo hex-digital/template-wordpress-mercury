@@ -1,0 +1,16 @@
+$wrapper: #{'.' + $OBJECT_PREFIX + 'wrapper'};
+
+@responsive {
+  #{$wrapper} {
+    &__wide {
+      max-width: none;
+      @screen xl {
+        @include wide-width();
+      }
+    }
+
+    &__bleed {
+      @include bleed-width();
+    }
+  }
+}

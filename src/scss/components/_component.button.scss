@@ -1,0 +1,160 @@
+$button-solid-colors: (
+  'black': (
+    'background': theme('colors.grey.200'),
+    'color': theme('colors.white'),
+    'hover-background': theme('colors.grey.300'),
+    'hover-color': theme('colors.white'),
+  ),
+  'blue': (
+    'background': theme('colors.blue.300'),
+    'color': theme('colors.white'),
+    'hover-background': theme('colors.blue.500'),
+    'hover-color': theme('colors.white'),
+  ),
+  'green': (
+    'background': theme('colors.green.300'),
+    'color': theme('colors.white'),
+    'hover-background': theme('colors.green.500'),
+    'hover-color': theme('colors.white'),
+  ),
+  'white': (
+    'background': theme('colors.grey.600'),
+    'color': theme('colors.grey.300'),
+    'hover-background': theme('colors.grey.400'),
+    'hover-color': theme('colors.grey.200'),
+  ),
+  'inverse': (
+    'background': theme('colors.grey.800'),
+    'color': theme('colors.grey.200'),
+    'hover-background': theme('colors.grey.500'),
+    'hover-color': theme('colors.grey.200'),
+  ),
+);
+
+$button-line-colors: (
+    'black': (
+        'default': theme('colors.grey.200'),
+        'hover':theme('colors.grey.300'),
+    ),
+    'blue': (
+        'default': theme('colors.blue.300'),
+        'hover': theme('colors.blue.500'),
+    ),
+    'green': (
+        'default': theme('colors.green.300'),
+        'hover': theme('colors.green.500'),
+    ),
+    'white': (
+        'default': theme('colors.grey.300'),
+        'hover': theme('colors.grey.400'),
+    ),
+    'inverse': (
+        'default': theme('colors.grey.800'),
+        'hover': theme('colors.grey.500'),
+    )
+);
+
+.c-btn--block {
+  @each $theme-name, $theme-map in $button-solid-colors {
+    &.c-btn--#{$theme-name} {
+      background-color: map-get($theme-map, 'background');
+      color: map-get($theme-map, 'color');
+    }
+    &.c-btn--#{$theme-name}:hover {
+      background-color: map-get($theme-map, 'hover-background');
+      color: map-get($theme-map, 'hover-color');
+    }
+  }
+}
+
+.c-btn--block {
+    &.c-btn--md {
+        font-size: theme('fontSize.sm');
+        padding: theme('space.3') theme('space.5');
+    }
+}
+
+.c-btn--line {
+  @each $theme-name, $color in $button-line-colors {
+    &.c-btn--#{$theme-name} {
+        color: map-get($color, 'default');
+    }
+    &.c-btn--#{$theme-name}:hover {
+        color: map-get($color, 'hover');
+    }
+  }
+}
+
+.c-btn--line {
+    &.c-btn--md {
+        font-size: theme('fontSize.sm');
+    }
+}
+
+.c-btn,
+.wp-block-button {
+  @apply u-font-title u-text-md;
+  letter-spacing: 0.1em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.c-btn--block,
+.wp-block-button.is-style-solid {
+  transition: background-color 0.2s theme('transitionTimingFunction.in-sine');
+  border-radius: 9999px;
+  box-shadow: theme('boxShadow.default');
+  padding: theme('space.3') theme('space.6');
+}
+
+/**
+ * [1] The left and right values of the pseudo element must match the left and right padding to keep the line the
+ *     same width as the text it sits beneath, while maintaining a larger clickable area around it.
+ * [2] If the bottom padding changes on the button, the bottom value of the pseudo element should adjust as well.
+ */
+
+%line-button {
+    $vertical-spacing: theme('spacing.3');
+    transition: color 0.2s theme('transitionTimingFunction.in-sine');
+    padding: $vertical-spacing theme('spacing.0'); /* [2] [1] */
+    &:before{
+        bottom: 0.5rem; /* [2] */
+        content: '';
+        left: 0; /* [1] */
+        margin: 0 auto;
+        position: absolute;
+        right: 0; /* [1] */
+    }
+}
+
+.c-btn--line,
+.wp-block-button.is-style-line {
+    @extend %line-button;
+    &:before {
+    border-bottom: 2px solid currentColor;
+    }
+}
+
+.c-btn--tertiary {
+    @extend %line-button;
+    &:before {
+        border-bottom-width: 0px;
+    }
+    &:hover:before {
+        border-bottom: 2px solid currentColor;
+    }
+    @each $theme-name, $color in $button-line-colors {
+        &.c-btn--#{$theme-name} {
+          color: map-get($color, 'default');
+        }
+        &.c-btn--#{$theme-name}:hover {
+          color: map-get($color, 'hover');
+        }
+    }
+}
+
+.c-btn--tertiary {
+    &.c-btn--md {
+        font-size: theme('fontSize.sm');
+    }
+}

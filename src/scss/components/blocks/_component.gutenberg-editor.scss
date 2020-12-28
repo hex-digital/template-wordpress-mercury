@@ -1,0 +1,37 @@
+/*
+ * These styles are for the gutenberg editor only, and should not be used on the front end.
+ * The editor's mark up is different to the front end, so needs a special stylesheet.
+ */
+
+/* Post title width */
+.editor-post-title__block.wp-block {
+  max-width: $GUTENBERG_MAX_WIDTH;
+}
+
+/* Main column width */
+.wp-block {
+  max-width: $GUTENBERG_MAX_WIDTH;
+
+  /* Wide column width */
+  &[data-align="wide"] {
+    max-width: none;
+
+    @screen xl {
+      max-width: none;
+      margin-left: calc(25vw - 25%);
+      margin-right: calc(25vw - 25%);
+    }
+  }
+
+  /* Full column width */
+  &[data-align="full"] {
+    max-width: none;
+  }
+}
+
+/**
+ * [1] The Button Blocks container already applies margin-top, so this removes the extra margin-top from the editor.
+ */
+.wp-block-button {
+  margin-top: 0; /* [1] */
+}

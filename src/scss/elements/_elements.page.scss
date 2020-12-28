@@ -1,0 +1,15 @@
+/**
+ * Simple page-level setup.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project. The `font-size` is in ems, the `line-height`
+ *    is unitless.
+ * 2. Allow absolute or fixed positioning to position properly even when WP admin-bar is visible at top of screen.
+ */
+
+html {
+  @apply u-font-body u-text-grey-200 u-text-base;
+  background-color: theme('colors.grey.800');
+  font-size: 1.125em; /* [1] */
+  line-height: 1.5; /* [1] */
+  position: relative; /* [2] */
+}
