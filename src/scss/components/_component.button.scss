@@ -103,7 +103,7 @@ $button-line-colors: (
 .wp-block-button.is-style-solid {
   transition: background-color 0.2s theme('transitionTimingFunction.in-sine');
   border-radius: 9999px;
-  box-shadow: theme('boxShadow.default');
+  box-shadow: theme('boxShadow.DEFAULT');
   padding: theme('space.3') theme('space.6');
 }
 

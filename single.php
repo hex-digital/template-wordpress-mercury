@@ -1,7 +1,7 @@
 <?php
 get_header() ?>
 
-<div class="o-wrapper u-gutenberg c-page-template">
+<div class="u-wrapper u-gutenberg c-page-template">
 
     <span class="u-text-date">
         <?= get_the_date() ?>

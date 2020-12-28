@@ -67,7 +67,7 @@ $block_class = [esc_attr($block['class-name']), 'acf-focus-block--' . esc_attr($
                 <?= focus_text_html($panel) ?>
             </div>
             <div class="acf-focus-panel__content">
-                <div class="o-content o-content--<?= $block_style === FocusBlock::STYLE_CENTRAL ? 'xl' : 'md-2' ?>">
+                <div class="u-max-w--<?= $block_style === FocusBlock::STYLE_CENTRAL ? '4xl' : 'xl' ?>">
                     <h3 class="u-text-heading-sm u-text-grey-800 u-mb-2"><?= $panel['title'] ?></h3>
                     <span class="u-text-grey-800"><?= $panel['subtitle'] ?></span>
                 </div>
