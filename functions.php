@@ -15,7 +15,8 @@ $features = [
     'AssetManifest',
     'GutenbergAcfSetup',
     'AcfGutenbergBlocks',
-    'FooterMenus'
+    'FooterMenus',
+    'AccessibilityDebug'
 ];
 
 foreach ($features as $feature) {
