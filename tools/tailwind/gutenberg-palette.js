@@ -35,10 +35,10 @@ module.exports = plugin(function ({ addUtilities, theme, e, corePlugins }) {
 
   for (const [colorName, colorValue] of Object.entries(textColors)) {
     utilities.push({
-      [e(`has-${colorName}-color`)]: getTextProperties(colorValue),
+      [`.${e(`has-${colorName}-color`)}`]: getTextProperties(colorValue),
     });
     utilities.push({
-      [e(`has-${colorName}-color`) + `.is-style-stroke`]: {
+      [`.${e(`has-${colorName}-color`)}.is-style-stroke`]: {
         '-webkit-text-stroke-color': colorValue,
       },
     });
@@ -46,7 +46,7 @@ module.exports = plugin(function ({ addUtilities, theme, e, corePlugins }) {
 
   for (const [colorName, colorValue] of Object.entries(backgroundColors)) {
     utilities.push({
-      [`has-${colorName}-background-color`]: getBgProperties(colorValue),
+      [`.${e(`has-${colorName}-background-color`)}`]: getBgProperties(colorValue),
     });
   }
 
