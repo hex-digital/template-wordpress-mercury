@@ -1,7 +1,7 @@
 <?php
 get_header() ?>
 
-<div class="u-wrapper c-page-template">
+<div class="o-wrapper c-page-template">
     <h1><?php the_title() ?></h1>
     <?php the_content() ?>
 

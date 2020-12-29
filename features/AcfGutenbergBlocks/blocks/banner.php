@@ -47,7 +47,7 @@ $bottom_swoosh_html = '<svg class="c-swoosh__overlay c-swoosh__overlay--bottom" 
     class="<?= esc_attr(implode(' ', $block_class)) ?>"
     style="background-image:url(<?= esc_url($bg_image_url) ?>)"
 >
-    <div class="u-wrapper">
+    <div class="o-wrapper">
         <?= $title_html ?>
         <div class="u-mb-2"></div>
         <?= $text_area_html ?>

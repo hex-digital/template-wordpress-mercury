@@ -41,7 +41,7 @@ if (! function_exists('getContrastColor')) {
 }
 ?>
 
-<div class="u-cluster">
+<div class="o-cluster">
     <div class="<?= $cluster_container_class ?>">
         <?php foreach ($buttons as $button) : ?>
             <?php $link = $button['link']; ?>

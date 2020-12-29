@@ -48,7 +48,7 @@
     "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
-    "@captaincss/captaincss": "^2.0.0",
+    "@captaincss/captaincss": "^2.2.2",
     "@khanacademy/tota11y": "^0.2.0",
     "assets-webpack-plugin": "^6.0.3",
     "autoprefixer": "^10.1.0",

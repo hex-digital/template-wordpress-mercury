@@ -1,11 +1,12 @@
-/* global require */
+/* global module, require */
 const Captaincss = require('@captaincss/captaincss');
+const { pxToRem: pxToRemHelper } = require('@captaincss/captaincss/helpers');
 const GutenbergPalette = require('./tools/tailwind/gutenberg-palette');
 
-/* global module */
+const baseFontSize = 16 * 1.125; // Font size defined as 1.125em in _elements.page.scss
+
 const pxToRem = (px) => {
-  const baseFont = 16 * 1.125; // Font size defined as 1.125em in _elements.page.scss
-  return px / baseFont + 'rem';
+  return pxToRemHelper(px, baseFontSize);
 };
 
 module.exports = {
@@ -19,6 +20,12 @@ module.exports = {
     },
   },
   plugins: [Captaincss, GutenbergPalette],
+  captain: {
+    prefix: {
+      objects: 'o-',
+      components: 'c-',
+    },
+  },
   theme: {
     extend: {
       spacing: {
@@ -29,6 +36,11 @@ module.exports = {
         36: pxToRem(140),
       },
     },
+    skipLink: (theme) => ({
+      styles: {
+        backgroundColor: theme('colors.white'),
+      },
+    }),
     screens: {
       // Mobile
       sm: '640px', // Tablet

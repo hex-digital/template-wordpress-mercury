@@ -9,7 +9,7 @@
 </head>
 
 <body <?= body_class() ?>>
-<a href="#skip-to--content" class="u-skip-link">Skip to Content</a>
+<a href="#skip-to--content" class="c-skip-link">Skip to Content</a>
 
 <?php include get_partials_directory() . '/navigation/navigation.php' ?>
 

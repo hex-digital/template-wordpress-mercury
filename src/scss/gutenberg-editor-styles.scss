@@ -4,7 +4,7 @@
  *
  * For example, the Gutenberg Editor applies wp-block classes to each block. These do not appear in the front end, but
  * only in the editor. These wp-block classes have a max-width, to constrain them, whereas the frontend would use
- * an u-wrapper object.
+ * an o-wrapper object.
  *
  * This means we need to maintain a separate stylesheet that has all of our base styles, plus the extra editor styling
  * required to make the editor work correctly.
@@ -22,9 +22,6 @@
 }
 
 @import 'tailwindcss/components';
-@layer components {
-  // Each object can be used on its own in any project. The only dependency is the tools.captain file.
-}
 
 @import 'components/component.button';
 @import 'components/component.swoosh';

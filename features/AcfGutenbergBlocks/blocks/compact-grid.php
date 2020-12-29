@@ -26,8 +26,8 @@ $rounded_class =
         : '');
 
 $aspect_ratio_class =
-    $image_aspect_ratio === ImageAspectRatio::ASPECT_RECTANGLE ? 'u-frame u-frame--16:9'
-        : ($image_aspect_ratio === ImageAspectRatio::ASPECT_SQUARE ? 'u-frame u-frame--square'
+    $image_aspect_ratio === ImageAspectRatio::ASPECT_RECTANGLE ? 'o-frame o-frame--16:9'
+        : ($image_aspect_ratio === ImageAspectRatio::ASPECT_SQUARE ? 'o-frame o-frame--square'
         : '');
 
 ?>
