@@ -27,7 +27,7 @@ module.exports = {
     new webpack.ProgressPlugin(),
 
     // Removes/cleans build folders and unused assets when rebuilding. See: https://www.npmjs.com/package/clean-webpack-plugin
-    new CleanWebpackPlugin({ cleanAfterEveryBuildPatterns: ['!fonts/*'] }),
+    new CleanWebpackPlugin({ cleanAfterEveryBuildPatterns: ['!fonts/*', '!images/*'] }),
 
     new AssetsPlugin({
       path: paths.build,
