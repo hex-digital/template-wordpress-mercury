@@ -3,9 +3,8 @@
   "version": "0.0.1",
   "description": "Mercury - WordPress Development Starter Theme - Built with 🖤",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack --config tools/webpack.dev.js",
-    "dev:start": "cross-env NODE_ENV=development webpack --config tools/webpack.dev.js --watch",
-    "dev:progress": "start --progress",
+    "dev": "cross-env NODE_ENV=development webpack --config tools/webpack.dev.js --watch",
+    "dev:progress": "dev --progress",
     "build": "cross-env NODE_ENV=production webpack --config tools/webpack.prod.js",
     "build:progress": "build --progress",
     "lint": "yarn lint:js",
