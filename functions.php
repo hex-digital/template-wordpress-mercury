@@ -16,6 +16,7 @@ $features = [
     'GutenbergAcfSetup',
     'AcfGutenbergBlocks',
     'FooterMenus',
+    'CmsBranding',
     'AccessibilityDebug'
 ];
 
