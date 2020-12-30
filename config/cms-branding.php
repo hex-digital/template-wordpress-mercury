@@ -1,8 +1,11 @@
 <?php
 
 return [
-    'enable-branding' => true,
+    'enable_branding' => true,
 
-    'header-text' => 'Mercury',
-    'header-url' => home_url(),
+    'login' => [
+        'stylesheet_manifest_entry' => ['css', 'login-branding'],
+        'header_text' => 'Mercury',
+        'header_url' => home_url(),
+    ],
 ];

@@ -1,0 +1,28 @@
+/* This CSS file is an example, and should be copied to your theme */
+
+.login {
+  background-image: url(../images/background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login h1 a {
+  background-image: url(../images/logo.png);
+  background-size: 167px 120px;
+  height: 120px;
+  width: 167px;
+}
+
+.login #nav a,
+.login #backtoblog a {
+  color: white;
+}
+
+#loginform {
+  background-color: transparent;
+  border: none;
+}
+
+#loginform label {
+  color: white;
+}

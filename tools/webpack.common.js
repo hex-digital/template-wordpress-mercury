@@ -10,6 +10,7 @@ module.exports = {
   entry: {
     main: [paths.src + '/js/index.js', paths.src + '/scss/main.scss'],
     gutenberg: [paths.src + '/js/gutenberg-editor.js', paths.src + '/scss/gutenberg-editor-styles.scss'],
+    'login-branding': [paths.src + '/scss/login-branding.scss'],
     // customizer: './src/customizer.js' // TODO: Left here as a reminder in case we need it later. Use it or lose it.
   },
 
