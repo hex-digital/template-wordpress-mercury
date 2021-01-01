@@ -824,10 +824,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@captaincss/captaincss@^2.2.2":
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/@captaincss/captaincss/-/captaincss-2.2.2.tgz#3648a00342558a85c43acf3e3cf4c2a086bccf55"
-  integrity sha512-s5zpKZWqHwxujlfcEnF0P63D5FCcYDnmjDIcFMKd76hbgsB+sixzqinr+k9/U7on85R8N5DvO21UZGRKOjLV5A==
+"@captaincss/captaincss@^2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@captaincss/captaincss/-/captaincss-2.2.4.tgz#8dbf91947d59010c2923ebb9c65edea80991ca83"
+  integrity sha512-j/ZyJExF64pyNey759vxzjUHCpVxuSeBHq6PfjNnwvtx+ctkyyNHR1s3xaP7MB+/9Sv0Tobx6sYwexi7ok+HVA==
   dependencies:
     lodash "^4.17.20"
 
