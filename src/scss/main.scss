@@ -14,21 +14,14 @@
 @import 'components/component.button';
 @import 'components/component.navigation';
 @import 'components/component.footer';
-@import 'components/component.search-modal';
-@import 'components/component.search-result';
-@import 'components/component.page-template';
-@import 'components/component.swoosh';
 @import 'components/blocks/component.acf-banner';
 @import 'components/blocks/component.acf-compact-grid';
 @import 'components/blocks/component.acf-focus-block';
 @import 'components/blocks/component.gute-spacer';
-@import 'components/component.language-switcher';
-@import 'components/component.paginate';
-@import 'components/component.thumbnail';
-@import 'components/component.tag';
 
 @import 'tailwindcss/utilities';
 @layer utilities {
   @import 'utilities/utilities.text';
+  @import 'utilities/utilities.animations';
   @import 'utilities/utilities.gutenberg-output';
 }

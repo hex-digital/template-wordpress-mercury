@@ -3,11 +3,8 @@ const Captaincss = require('@captaincss/captaincss');
 const { pxToRem: pxToRemHelper } = require('@captaincss/captaincss/helpers');
 const GutenbergPalette = require('./tools/tailwind/gutenberg-palette');
 
-const baseFontSize = 16 * 1.125; // Font size defined as 1.125em in _elements.page.scss
-
-const pxToRem = (px) => {
-  return pxToRemHelper(px, baseFontSize);
-};
+const baseFontSize = 16;
+const pxToRem = (px) => pxToRemHelper(px, baseFontSize);
 
 module.exports = {
   prefix: 'u-',
@@ -43,6 +40,7 @@ module.exports = {
     }),
     screens: {
       // Mobile
+      xs: '440px', // Small screen
       sm: '640px', // Tablet
       md: '880px', // Desktop small
       lg: '1180px', // Desktop
@@ -147,6 +145,12 @@ module.exports = {
       wide: '.08em',
       wider: '.1em',
       widest: '.25em',
+    },
+    zIndex: {
+      background: '-1',
+      base: '0',
+      navbar: '10',
+      modal: '15',
     },
     wrapper: (theme) => ({
       padding: {

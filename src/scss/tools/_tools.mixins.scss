@@ -48,3 +48,12 @@
   margin-right: calc(-100vw / 2 + 100% / 2);
   max-width: 100vw;
 }
+
+@mixin adminbar() {
+  .admin-bar & {
+    margin-top: 32px;
+    @media screen and ( max-width: 782px ) {
+      margin-top: 46px;
+    }
+  }
+}

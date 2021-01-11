@@ -1,5 +1,6 @@
 <?php // Some tags opened in header.php ?>
-        </main>
+            </main>
+        </div> <?php // Close the sticky footer container.  See _elements.pages.scss ?>
 
         <footer class="c-footer">
             <div class="c-footer__copyright">
