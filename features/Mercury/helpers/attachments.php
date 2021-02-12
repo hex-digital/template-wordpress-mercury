@@ -98,3 +98,49 @@ if (!function_exists('acf_background_image_from_id')) {
         return acf_image_from_id($id, 'large', $args);
     }
 }
+
+/**
+ * From an acf oEmbed object and a set of options, add those options to the embed URL.
+ */
+if (!function_exists('acf_oembed_with_options')) {
+    function acf_oembed_with_options(?string $oembed = '', array $args = []): string
+    {
+        if (!$oembed) {
+            return '';
+        }
+
+        // Use preg_match to find iframe src.
+        preg_match('/src="(.+?)"/', $oembed, $matches);
+        $src = $matches[1];
+
+        // Add extra parameters to src and replace HTML.
+        $new_src = add_query_arg($args, $src);
+        $iframe = str_replace($src, $new_src, $oembed);
+
+        // Add extra attributes to iframe HTML.
+        $attributes = 'frameborder="0"';
+        $iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
+        // Display customized HTML.
+        return $iframe;
+    }
+}
+
+/**
+ * An background options to an ACF oEmbed, plus others.
+ */
+if (!function_exists('acf_oembed_background_with_options')) {
+    function acf_oembed_background_with_options(?string $oembed = '', array $args = []): string
+    {
+        $merged_args = array_merge([
+            'controls' => 0,
+            'autohide' => 1,
+            'autoplay' => 1,
+            'background' => 1,
+            'hd' => 1,
+            'muted' => 1,
+        ], $args);
+
+        return acf_oembed_with_options($oembed, $merged_args);
+    }
+}

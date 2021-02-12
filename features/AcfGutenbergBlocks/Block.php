@@ -34,7 +34,7 @@ class Block
      *
      * @param array $block
      */
-    public function render_block(array $block): void
+    public function render_block(array $block, $content = '', $is_preview = false, $post_id = 0): void
     {
         $block = $this->transform_block_name($block);
         $block_file_path = $this->get_block_template($block);
