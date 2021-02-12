@@ -27,6 +27,6 @@ if (! function_exists('config')) {
             return $bl_helper_config;
         }
 
-        return $bl_helper_config[$key];
+        return $bl_helper_config[$key] ?? [];
     }
 }
