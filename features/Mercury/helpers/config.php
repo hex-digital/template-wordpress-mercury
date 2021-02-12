@@ -2,14 +2,14 @@
 
 use Lib\Config\Config as Config;
 
-$bl_helper_config = null;
+$mer_helper_config = null;
 
 if (! function_exists('config')) {
     function config($key = null)
     {
-        global $bl_helper_config;
+        global $mer_helper_config;
 
-        if (!$bl_helper_config) {
+        if (!$mer_helper_config) {
             $merged_config = [];
 
             $config_files = new DirectoryIterator(__DIR__ . '/../../../config');
@@ -20,13 +20,13 @@ if (! function_exists('config')) {
                 }
             }
 
-            $bl_helper_config = new Config($merged_config);
+            $mer_helper_config = new Config($merged_config);
         }
 
         if ($key === null) {
-            return $bl_helper_config;
+            return $mer_helper_config;
         }
 
-        return $bl_helper_config[$key] ?? [];
+        return $mer_helper_config[$key] ?? [];
     }
 }
