@@ -1,4 +1,3 @@
-/* global module, require */
 const Captaincss = require('@captaincss/captaincss');
 const { pxToRem: pxToRemHelper } = require('@captaincss/captaincss/helpers');
 const GutenbergPalette = require('./tools/tailwind/gutenberg-palette');

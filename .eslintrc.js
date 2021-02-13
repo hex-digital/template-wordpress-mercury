@@ -1,14 +1,12 @@
-/* global module */
 module.exports = {
   root: true,
   env: {
     browser: true,
+    commonjs: true,
     es2021: true,
+    jquery: true,
   },
   extends: ['eslint:recommended', 'plugin:prettier/recommended'],
-  globals: {
-    jQuery: 'readonly',
-  },
   parserOptions: {
     ecmaVersion: 12,
     sourceType: 'module',
@@ -16,5 +14,5 @@ module.exports = {
   rules: {
     'prettier/prettier': 'warn',
   },
-  ignorePatterns: ['dist/**/*', 'node_modules/**/*'],
+  ignorePatterns: ['dist/**/*', 'node_modules/**/*', 'vendor/**/*'],
 };
